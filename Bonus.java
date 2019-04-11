@@ -8,7 +8,7 @@ package com.game.model;
 import com.game.common.Configure;
 
 /**
- * This sets up the Element values of Bonus object.
+ * This class sets up the Element values of Bonus object.
  */
 public class Bonus extends Element {
 
