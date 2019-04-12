@@ -30,7 +30,8 @@ public class PlayerPanel extends JPanel {
     private volatile Snake snake;
 
     /**
-     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall and Interval. This will use the default interval given
+     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall and Interval. This will use the default interval
+     * in the configuration file.
      */
     public PlayerPanel() {
         initGame();
@@ -175,7 +176,7 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     * Method initalizes the sanke.
+     * Method initalizes the snake.
      */
     public void initSnake() {
         SnakeBody tempSnakeBody = new SnakeBody(Configure.SnakeBody.image1);
@@ -208,7 +209,7 @@ public class PlayerPanel extends JPanel {
     /**
      * Method that will run the snake thorugh a loop. It will continue to loop as long as the snake is stil alive. This is how the
      * snake will move throughout the board. It will also handle conditions when the snake eats an element object.
-     * @param snake ( Type Snake) - The snake we want to run it through the loop.
+     * @param snake (Type Snake) - The snake we want to run it through the loop.
      * @param countDownThread (Type Thread) - Timer that will be used before the game starts
      * @param interval (Type int) - How fast you want the game to be. (How fast the snake moves)
      */
@@ -258,7 +259,7 @@ public class PlayerPanel extends JPanel {
     
     
      /**
-     * This method sets the Snake picture size to make the picture in the path have the same size in the game.
+     * This method sets the Snake responsible for drawing the snake's head and body. 
      * @param g (Type Graphics) - Object that is responsible for drawing
      * @param e (Type Element) - The element object that you want to pass in
      */
@@ -282,7 +283,7 @@ public class PlayerPanel extends JPanel {
     
     /**
      * Get elements of the wall/rock
-     * @return (Type Element) - Element returned will be the walls
+     * @return (Type ArrayList) - Element returned will be the ArrayList of type Element
      */
     public ArrayList<Element> getBlockElement() {
         ArrayList<Element> elements = getDynamicElement();
@@ -297,7 +298,7 @@ public class PlayerPanel extends JPanel {
     
     /**
      * Method will get dynamic elements which will be the foods. (Bonus, Food, Poision)
-     * @return (Type Element) - Element returned will Bonus, Food, Poision
+     * @return (Type ArrayList) - Element returned will be an ArrayList of type Element
      */
     public ArrayList<Element> getDynamicElement(){
         ArrayList<Element> elements = new ArrayList<Element>();
@@ -330,7 +331,7 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     * Method used to give all object on the board pcitures
+     * Method used to give all object on the board pictures
      * @param g (type Graphics) - object used to draw the pictures. 
      */
     @Override
@@ -354,7 +355,7 @@ public class PlayerPanel extends JPanel {
     
 
     /**
-     * This method renders the current score.
+     * This method renders the current score for the player.
      * @param g (Type Graphics) - Object required to draw.
      */
     public void renderScore(Graphics g) {
@@ -368,7 +369,7 @@ public class PlayerPanel extends JPanel {
     
     /**
      * Method used to check if game is over. 
-     * @return (boolean). true or false depending if the snake is alive or not.
+     * @return (boolean). false if the snake is alive, true otherwise. 
      */
     public boolean isGameOver() {
         return !this.snake.isAlive();
@@ -402,7 +403,7 @@ public class PlayerPanel extends JPanel {
     
     /**
      * Method used for making food and rocks randomly in the map. 
-     * @param g (Type Graphics) - USed for drawing these elements. 
+     * @param g (Type Graphics) - Used for drawing these elements. 
      */
     private void renderElement(Graphics g) {
         ArrayList<Element> elements = getAllElement();
