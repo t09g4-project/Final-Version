@@ -9,10 +9,18 @@ import com.game.common.Configure;
 
 import javax.swing.*;
 
+
+/**
+ * Class responsible for panel for two players. It will be used mainly for getting the players names before 
+ * beggining the game.
+ */
 public class GetNamePanel extends JPanel {
 
     
-    
+    /**
+     * This constructor adds the components for the panel. It will add labels for the names, textfields to get
+     * the names, and a button.
+     */
     public GetNamePanel() {
         this.setBackground(Configure.Theme.BACKGROUND_COLOR);
         JLabel aLabel = new JLabel("Player 1 Name :");
@@ -23,7 +31,10 @@ public class GetNamePanel extends JPanel {
         JPanel thisPanel = this;
         
         
-        
+         /**
+         * Lambda expression that will respond when "Begin!" button is pressed. 
+         * When pressed if will check to see if names a filled in, if so, it will start the two player game.
+         */
         jButton.addActionListener(e -> {
             String aName = aNameField.getText();
             String bName = bNameField.getText();
