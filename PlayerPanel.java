@@ -61,6 +61,12 @@ public class PlayerPanel extends JPanel {
         run(countDownThread(), interval);
     }
 
+    
+    
+    /**
+     * Method that countdowns before the game starts.
+     * @return countDOwnThread (Type Thread) 
+     */
     private Thread countDownThread() {
         Thread countDownThread = new Thread(() -> {
             for (int i = 3; i > 0; i--) {
