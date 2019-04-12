@@ -60,6 +60,9 @@ public class PlayerPanel extends JPanel {
     
     
     
+    /**
+     * Method that will call run method - runs the countdown. 
+     */
     public void go() {
         run(countDownThread(), interval);
     }
@@ -186,7 +189,9 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
+     * Method that will used to let the player to run the  with countdown. 
+     * @param countDownThread (type Thread) - Timer used that will countdown before the game starts
+     * @param interval (Type int) - How fast you want the game to be. (How fast the snake moves)
      */
     public void run(Thread countDownThread, Integer interval) {
         JPanel jPanel = this;
@@ -201,8 +206,11 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
-     * @param snake
+     * Method that will run the snake thorugh a loop. It will continue to loop as long as the snake is stil alive. This is how the
+     * snake will move throughout the board. It will also handle conditions when the snake eats an element object.
+     * @param snake ( Type Snake) - The snake we want to run it through the loop.
+     * @param countDownThread (Type Thread) - Timer that will be used before the game starts
+     * @param interval (Type int) - How fast you want the game to be. (How fast the snake moves)
      */
     public void runSnake(Snake snake, Thread countDownThread, Integer interval) {
         while (snake.isAlive()) {
@@ -274,7 +282,7 @@ public class PlayerPanel extends JPanel {
     
     /**
      * Get elements of the wall/rock
-     * @return
+     * @return (Type Element) - Element returned will be the walls
      */
     public ArrayList<Element> getBlockElement() {
         ArrayList<Element> elements = getDynamicElement();
@@ -288,8 +296,8 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
-     * @return
+     * Method will get dynamic elements which will be the foods. (Bonus, Food, Poision)
+     * @return (Type Element) - Element returned will Bonus, Food, Poision
      */
     public ArrayList<Element> getDynamicElement(){
         ArrayList<Element> elements = new ArrayList<Element>();
@@ -305,9 +313,9 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
-     * @param element (if it is exisiting,
-     * @return
+     * Determines if the element is existing on the board at a specific coordinate.
+     * @param element (Type Element) - The element we want to check if it exists
+     * @return (boolean) true if the element exists on the board, false otherwise.
      */
     public boolean isExistElement(Element element) {
         ArrayList<Element> blockElements = getBlockElement();
@@ -322,8 +330,8 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
-     * @param g
+     * Method used to give all object on the board pcitures
+     * @param g (type Graphics) - object used to draw the pictures. 
      */
     @Override
     protected void paintComponent(Graphics g) {
@@ -369,8 +377,8 @@ public class PlayerPanel extends JPanel {
     
 
     /**
-     * 
-     * @param g
+     * Method that will draw a red word stating the snake is dead. It will appear below the score.  
+     * @param g (Type Graphics) - Obejct used to draw the word. 
      */
     public void dead(Graphics g) {
         g.setColor(Color.RED);
@@ -381,8 +389,8 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     * 
-     * @return
+     * Method that holds/ keep track of snake body and make it come with the head. 
+     * @return elements
      */
     public ArrayList<Element> getAllElement() {
         ArrayList<Element> elements = getBlockElement();
@@ -393,8 +401,8 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
-     * @param g
+     * Method used for making food and rocks randomly in the map. 
+     * @param g (Type Graphics) - USed for drawing these elements. 
      */
     private void renderElement(Graphics g) {
         ArrayList<Element> elements = getAllElement();
@@ -406,8 +414,9 @@ public class PlayerPanel extends JPanel {
    
 
     /**
-     *
-     * @param nextElement
+     * Method that will handle when the food is eaten. If the food is able to be  eaten, it will check what type of food was eaten.
+     * Then it will initalize a new object of the type that was eaten. 
+     * @param nextElement (Type Element)
      */
     public void handleEatenElement(Element nextElement) {
         if (nextElement != null && nextElement.isEatable()) {
