@@ -66,7 +66,7 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     /**
      * Method that will call the parent method initSnake() which initalizes the snake one. 
-     * ALso will initalize snake two.
+     * Also will initalize snake two by calling the initSnake2 method.
      */
     @Override
     public void initSnake(){
@@ -91,8 +91,9 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     
     /**
-     *
-     * @return
+     * Will call to the parent method getAllElement which holds/keep track of snake body and make it come with
+     * the head. 
+     * @return elements (Type ArrayList) 
      */
     @Override
     public ArrayList<Element> getAllElement() {
@@ -103,9 +104,9 @@ public class TwoPlayerPanel extends PlayerPanel {
 
     
     
-    /**
-     *
-     * @param g
+     /**
+     * This method renders the current score for snake 2.
+     * @param g (Type Graphics) - Object required to draw.
      */
     @Override
     public void renderScore(Graphics g) {
@@ -118,7 +119,9 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     
     /**
-     *
+     * Method that will used to let the player to run the  with countdown. 
+     * @param countDownThread (type Thread) - Timer used that will countdown before the game starts
+     * @param interval (Type int) - How fast you want the game to be. (How fast the snake moves)
      */
     @Override
     public void run(Thread countDownThread, Integer interval) {
@@ -135,9 +138,9 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     
     /**
-     *
-     * @param g
-     * @param e
+     * Method gives the snake 2 head and body an image from reading in the resources folder. 
+     * @param g (Type Graphics) - Object that is responsible for drawing
+     * @param e (Type Element) - The element object that you want to pass in
      */
     @Override
     void fillRect(Graphics g, Element e) {
@@ -162,8 +165,8 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     
     /**
-     *
-     * @param g
+     * Method that will draw a red word stating that snake 2 is dead.
+     * @param g (Type Graphics) - Obejct used to draw the word. 
      */
     public void dead2(Graphics g) {
         g.setColor(Color.RED);
