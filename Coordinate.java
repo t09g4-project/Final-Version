@@ -13,6 +13,9 @@ public class Coordinate {
     private int x;
     private int y;
 
+    
+    
+    
     /**
      * Constructor that will set up the X and Y coordinates of an object.
      * @param x - type int (X coordinate of the object)
@@ -23,12 +26,17 @@ public class Coordinate {
         this.y = y;
     }
 
+    
+    
+    
     /**
      * Default constructor
      */
     public Coordinate() {
     }
 
+    
+    
     /**
      * Getter method that gets the X coordinate of the object
      * @return x (the x coordinate of an object - Type int)
@@ -37,6 +45,8 @@ public class Coordinate {
         return x;
     }
 
+    
+    
     /**
      * Setter method that sets the X coordinate of the object
      * @param x (the x coordinate you want the object to be set at - type int)
@@ -45,6 +55,8 @@ public class Coordinate {
         this.x = x;
     }
 
+    
+    
     /**
      * Getter method that gets the Y coordinate of the object
      * @return y (the y coordinate of an object - Type int)
@@ -53,6 +65,8 @@ public class Coordinate {
         return y;
     }
 
+    
+    
     /**
      * Setter method that sets the Y coordinate of the object
      * @param y (the y coordinate you want the object to be set at - type int)
