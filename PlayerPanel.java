@@ -30,8 +30,7 @@ public class PlayerPanel extends JPanel {
     private volatile Snake snake;
 
     /**
-     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall.
-     * It will also use the run method.
+     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall and Interval
      */
     public PlayerPanel() {
         initGame();
