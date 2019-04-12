@@ -347,7 +347,7 @@ public class PlayerPanel extends JPanel {
 
     /**
      * This method renders the current score.
-     * @param g
+     * @param g (Type Graphics) - Object required to draw.
      */
     public void renderScore(Graphics g) {
         g.setColor(snake.getBodyColor());
@@ -358,6 +358,10 @@ public class PlayerPanel extends JPanel {
 
     
     
+    /**
+     * Method used to check if game is over. 
+     * @return (boolean). true or false depending if the snake is alive or not.
+     */
     public boolean isGameOver() {
         return !this.snake.isAlive();
     }
@@ -365,7 +369,7 @@ public class PlayerPanel extends JPanel {
     
 
     /**
-     *
+     * 
      * @param g
      */
     public void dead(Graphics g) {
@@ -377,7 +381,7 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
+     * 
      * @return
      */
     public ArrayList<Element> getAllElement() {
@@ -423,8 +427,8 @@ public class PlayerPanel extends JPanel {
     
 
     /**
-     *
-     * @return
+     * Getter method for WallList.
+     * @return (Type ArrayList) - ArrayList that contains the walls.
      */
     public ArrayList<Wall> getWallList() {
         return wallList;
@@ -433,8 +437,8 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     *
-     * @param wallList
+     * Setter method for WallList.
+     * @param wallList (Type ArrayList) - The ArrayList of walls you want to pass in
      */
     public void setWallList(ArrayList<Wall> wallList) {
         this.wallList = wallList;
@@ -443,8 +447,8 @@ public class PlayerPanel extends JPanel {
     
 
     /**
-     *
-     * @return
+     * Getter method for Rampart.
+     * @return (type ArrayList) - ArrayList that contains RampArt.
      */
     public ArrayList<Wall> getRampart() {
         return rampart;
@@ -453,8 +457,8 @@ public class PlayerPanel extends JPanel {
     
     
     /**
-     * 
-     * @param rampart
+     * Setter method for Rampart.
+     * @param rampart (Type ArrayList) - The ArrayList of walls you want to pass in
      */
     public void setRampart(ArrayList<Wall> rampart) {
         this.rampart = rampart;
