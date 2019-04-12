@@ -20,8 +20,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- *
- */
+     * Constructor that will call the the super constructor in PlayerPanel.
+     * It will also set the names of the snakes belonging to each player
+     * @param aName (Type String)(Name for the snake for player one)
+     * @param bName (Type String)(Name for the snake for player two)
+     */
 public class TwoPlayerPanel extends PlayerPanel {
     private volatile Snake snake2;
 
@@ -33,9 +36,10 @@ public class TwoPlayerPanel extends PlayerPanel {
 
     
     
-    /**
-     *
-     * @param g
+   /**
+     * Method that will call to super paintComponent, which gives all the objects on the board pictures. 
+     * It will also call methods in this class dead2 (if snake is dead) and gameover (if game is over)
+     * @param g (Type Graphics) - Object needed to draw all these componenets/pictures. 
      */
     @Override
     protected void paintComponent(Graphics g) {
@@ -49,6 +53,10 @@ public class TwoPlayerPanel extends PlayerPanel {
 
     
     
+    /**
+     * Method that overrides isGameOver() in parent class.
+     * @return isGamerOver() from parent class and the boolean state of snake2 to check if alive or not.
+     */
     @Override
     public boolean isGameOver() {
         return super.isGameOver() && !snake2.isAlive();
@@ -57,7 +65,8 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     
     /**
-     *
+     * Method that will call the parent method initSnake() which initalizes the snake one. 
+     * ALso will initalize snake two.
      */
     @Override
     public void initSnake(){
@@ -68,7 +77,7 @@ public class TwoPlayerPanel extends PlayerPanel {
     
     
     /**
-     *
+     * Method that will initalize snake two. 
      */
     private void initSnake2() {
         SnakeBody tempSnakeBody = new SnakeBody(Configure.SnakeBody.image2);
