@@ -19,7 +19,9 @@ import java.util.ArrayList;
 
 import static java.lang.Thread.sleep;
 
-
+/**
+ * Class responsible for the Main Snake game panel. 
+ */
 public class PlayerPanel extends JPanel {
     private ArrayList<Wall> wallList;
     private ArrayList<Wall> rampart;
