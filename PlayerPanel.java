@@ -30,7 +30,7 @@ public class PlayerPanel extends JPanel {
     private volatile Snake snake;
 
     /**
-     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall and Interval
+     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall and Interval. This will use the default interval given
      */
     public PlayerPanel() {
         initGame();
@@ -42,6 +42,12 @@ public class PlayerPanel extends JPanel {
         this.interval = Configure.Board.INTERVAL;
     }
 
+    
+    
+    /**
+     * Constructor that sets up the game, snake, Food, Bonus, Posion, Wall, and interval.
+     * @param interval (Type Int) - The interval you want the game to be set. ( How fast you want the game to be)
+     */
     public PlayerPanel(Integer interval) {
         initGame();
         initSnake();
