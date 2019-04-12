@@ -17,7 +17,7 @@ public class ChooseLevelPanel extends JPanel {
     
     /**
      * Constructor that sets up the panel of the levelPanel. It adds the labels for player to choose challenge level,
-     * a combox box of options the levels the player can pick, and a begin button.
+     * a combo box of options the levels the player can pick, and a begin button.
      */
     public ChooseLevelPanel() {
         this.setBackground(Configure.Theme.BACKGROUND_COLOR);
