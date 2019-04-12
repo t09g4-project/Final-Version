@@ -17,8 +17,7 @@ import java.awt.*;
 public class GameFrame extends JFrame {
 
     /**
-     * Constructor that will set up the title of the window, add the Button panels (the player 1, player 2 option), set
-     * up the board.
+     * Constructor that will set up the title of the window. It will also set the panels up and the panel size.
      */
     public GameFrame() {
         this.setTitle("Snake Game");
