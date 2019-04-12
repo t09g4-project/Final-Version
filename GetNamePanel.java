@@ -11,6 +11,8 @@ import javax.swing.*;
 
 public class GetNamePanel extends JPanel {
 
+    
+    
     public GetNamePanel() {
         this.setBackground(Configure.Theme.BACKGROUND_COLOR);
         JLabel aLabel = new JLabel("Player 1 Name :");
@@ -19,6 +21,9 @@ public class GetNamePanel extends JPanel {
         JTextField bNameField = new JTextField(15);
         JButton jButton = new Button("Begin!");
         JPanel thisPanel = this;
+        
+        
+        
         jButton.addActionListener(e -> {
             String aName = aNameField.getText();
             String bName = bNameField.getText();
@@ -33,6 +38,8 @@ public class GetNamePanel extends JPanel {
                 twoPlayerPanel.go();
             }
         });
+        
+        
         add(aLabel);
         add(aNameField);
         add(bLabel);
