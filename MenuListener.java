@@ -30,6 +30,8 @@ public class MenuListener implements ActionListener {
         this.jFrame = jFrame;
     }
 
+    
+    
     /**
      * Method that will preform an action depending on which button was pressed.
      * If 1 Player was pressed, it will change the view to PlayerPanel.
@@ -51,6 +53,8 @@ public class MenuListener implements ActionListener {
         }
     }
 
+    
+    
     /**
      *
      * @param e
@@ -63,6 +67,8 @@ public class MenuListener implements ActionListener {
         parent.repaint();
     }
 
+    
+    
     /**
      * This method changes the Jpanel.
      * @param jPanel (Object JPanel - It is the new JPanel you want to switch to)
