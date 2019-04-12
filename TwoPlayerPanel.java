@@ -19,15 +19,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
+
+public class TwoPlayerPanel extends PlayerPanel {
+    private volatile Snake snake2;
+
+    
+    /**
      * Constructor that will call the the super constructor in PlayerPanel.
      * It will also set the names of the snakes belonging to each player
      * @param aName (Type String)(Name for the snake for player one)
      * @param bName (Type String)(Name for the snake for player two)
      */
-public class TwoPlayerPanel extends PlayerPanel {
-    private volatile Snake snake2;
-
     public TwoPlayerPanel(String aName, String bName) {
         super();
         this.getSnake().setName(aName);
@@ -93,7 +95,7 @@ public class TwoPlayerPanel extends PlayerPanel {
     /**
      * Will call to the parent method getAllElement which holds/keep track of snake body and make it come with
      * the head. 
-     * @return elements (Type ArrayList) 
+     * @return elements (Type ArrayList of type Element) 
      */
     @Override
     public ArrayList<Element> getAllElement() {
