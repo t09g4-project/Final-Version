@@ -33,7 +33,7 @@ public class GetNamePanel extends JPanel {
         
          /**
          * Lambda expression that will respond when "Begin!" button is pressed. 
-         * When pressed if will check to see if names a filled in, if so, it will start the two player game.
+         * When pressed if will check to see if names a filled in, if so, it will change panels and start the two player game.
          */
         jButton.addActionListener(e -> {
             String aName = aNameField.getText();
