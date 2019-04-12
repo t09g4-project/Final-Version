@@ -17,6 +17,7 @@ import javax.swing.*;
 public class GetNamePanel extends JPanel {
 
     
+    
     /**
      * This constructor adds the components for the panel. It will add labels for the names, textfields to get
      * the names, and a button.
@@ -29,6 +30,7 @@ public class GetNamePanel extends JPanel {
         JTextField bNameField = new JTextField(15);
         JButton jButton = new Button("Begin!");
         JPanel thisPanel = this;
+        
         
         
          /**
