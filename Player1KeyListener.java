@@ -26,6 +26,8 @@ public class Player1KeyListener implements KeyListener {
         this.snake = snake;
     }
 
+    
+    
     /**
      * Handles the key typed event.
      * @param e
@@ -34,6 +36,8 @@ public class Player1KeyListener implements KeyListener {
     public void keyTyped(KeyEvent e) {
 
     }
+    
+    
 
     /**
      * Method is responsible for listen to what the player 1 has pressed. Then it will move the snake depending on what
@@ -57,6 +61,8 @@ public class Player1KeyListener implements KeyListener {
                 break;
         }
     }
+    
+    
 
     /**
      * Handles the key released event.
