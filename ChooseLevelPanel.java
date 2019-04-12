@@ -10,11 +10,15 @@ import com.game.common.Configure;
 import javax.swing.*;
 
 /**
- * Levelpanel is a panel for setting up challenge mode. 
+ * Levelpanel is a panel for setting up the level/mode.
  */
 public class ChooseLevelPanel extends JPanel {
     
     
+    /**
+     * Constructor that sets up the panel of the levelPanel. It adds the labels for player to choose challenge level,
+     * a combox box of options the levels the player can pick, and a begin button.
+     */
     public ChooseLevelPanel() {
         this.setBackground(Configure.Theme.BACKGROUND_COLOR);
         JLabel label = new JLabel("Challenge Level: ");
@@ -26,7 +30,9 @@ public class ChooseLevelPanel extends JPanel {
         JPanel thisPanel = this;
         
         
-        
+        /**
+         * Lamda expression to handle when the "Begin" button is pressed.
+         */
         button.addActionListener(e -> {
             JFrame jFrame = (JFrame) thisPanel.getParent().getParent().getParent();
             thisPanel.removeAll();
