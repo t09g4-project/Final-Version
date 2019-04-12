@@ -39,6 +39,8 @@ public class Snake {
         initBody(x, y);
     }
 
+    
+    
     /**
      * THis method will keep track of the snake's past positions by adding the coordinates to the linked list.
      * @param x (x coordinate of the snake position - type int)
@@ -50,6 +52,8 @@ public class Snake {
         this.bodies = bodies;
     }
 
+    
+    
     /**
      * This is a getter method that gets the direction of the snake.
      * @return direction (Type Direction - the current direction of the snake)
@@ -58,6 +62,8 @@ public class Snake {
         return direction;
     }
 
+    
+    
     /**
      * This method is a setter method that sets the direction of the snake
      * @param direction (type Direction - the direction you want the snake to move)
@@ -74,6 +80,8 @@ public class Snake {
         this.direction = direction;
     }
 
+    
+    
     /**
      * This method gets the life status of the snake
      * @return isAlive (boolean - true if snake is alive, false if snake is dead)
@@ -82,6 +90,8 @@ public class Snake {
         return isAlive;
     }
 
+    
+    
     /**
      * This method is a setter method to set life status of the snake.
      * @param alive (type boolean - true if snake is alive, false if snake dead.)
@@ -90,6 +100,8 @@ public class Snake {
         isAlive = alive;
     }
 
+    
+    
     /**
      * Getter method that gets the linked list of the snake's bodies
      * @return (the body parts of the snake. type linked list)
@@ -98,6 +110,8 @@ public class Snake {
         return bodies;
     }
 
+    
+    
     /**
      * Getter method that gets the current score.
      * @return (score. The current score in the game)
@@ -106,6 +120,8 @@ public class Snake {
         return score;
     }
 
+    
+    
     /**
      * This method is responsible for action of eating.
      * @param element (The objects such as Food, Posion, etc)
@@ -141,6 +157,8 @@ public class Snake {
         }
     }
 
+    
+    
     /**
      * This method determines the next x position of the snake.
      * @return (The x coordinate of next position) - Type int
@@ -154,6 +172,8 @@ public class Snake {
         return x;
     }
 
+    
+    
     /**
      * This method determines the next y position of the snake.
      * @return (The y coordinate of the next position)- Type int
@@ -167,6 +187,8 @@ public class Snake {
         return y;
     }
 
+    
+    
     /**
      * Getter method that gets the body color of the snake.
      * @return bodycolor (the body color of the snake) - Type Color
@@ -175,6 +197,8 @@ public class Snake {
         return bodyColor;
     }
 
+    
+    
     /**
      * Method sets the body color of the snake.
      * @param bodyColor (The color you want the snake's body to be) - Type color
@@ -183,6 +207,8 @@ public class Snake {
         this.bodyColor = bodyColor;
     }
 
+    
+    
     /**
      * Getter method that gets the snake's body image path.
      * @return bodyimage (the String of the image's path)
@@ -191,6 +217,8 @@ public class Snake {
         return bodyImage;
     }
 
+    
+    
     /**
      * Setter method that sets the path of the image for the body.
      * @param bodyImage (String of the path of the image)
@@ -199,18 +227,42 @@ public class Snake {
         this.bodyImage = bodyImage;
     }
 
+    
+    
+    /**
+     * Getter method for code. 
+     * @return code - Type String
+     */
     public String getCode() {
         return code;
     }
 
+    
+    
+    /**
+     * Setter method for code
+     * @param code - Type String
+     */
     public void setCode(String code) {
         this.code = code;
     }
 
+    
+    
+    /**
+     * Getter method for name.
+     * @return name (type String - name of the snake/player)
+     */
     public String getName() {
         return name;
     }
 
+    
+    
+    /**
+     * Setter method for the name.
+     * @param name (type String - name you want the snake/player to be)
+     */
     public void setName(String name) {
         this.name = name;
     }
