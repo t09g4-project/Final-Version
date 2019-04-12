@@ -17,6 +17,8 @@ public class Element extends Coordinate {
     private boolean isEatable;
     private String imagePath;
 
+    
+    
     /**
      * Constructor that will set the X and Y coordinates of the object
      * @param x (type int - The X coordinate of the object)
@@ -26,11 +28,15 @@ public class Element extends Coordinate {
         super(x, y);
     }
 
+    
+    
     /**
      * Default constructor
      */
     public Element(){}
 
+    
+    
     /**
      * This is a getter method that gets the score of the object.
      * @return score (type int - the score of the object)
@@ -39,6 +45,8 @@ public class Element extends Coordinate {
         return score;
     }
 
+    
+    
     /**
      * This method gets the color of the object.
      * @return color (type Color - the color of the object)
@@ -47,6 +55,8 @@ public class Element extends Coordinate {
         return color;
     }
 
+    
+    
     /**
      * Method that sets the score of the object
      * @param score (type int - the score of the object)
@@ -55,6 +65,8 @@ public class Element extends Coordinate {
         this.score = score;
     }
 
+    
+    
     /**
      * Method sets the color of the object
      * @param color (Type Color - color you want the object to be)
@@ -63,6 +75,8 @@ public class Element extends Coordinate {
         this.color = color;
     }
 
+    
+    
     /**
      * This method gets the status if the object is eatable.
      * @return isEatable (type boolean)
@@ -71,6 +85,8 @@ public class Element extends Coordinate {
         return isEatable;
     }
 
+    
+    
     /**
      * This method is a setter method that sets the object's eatable status.
      * @param eatable (type boolean) True if eatable, false if not eatable.
@@ -79,6 +95,8 @@ public class Element extends Coordinate {
         isEatable = eatable;
     }
 
+    
+    
     /**
      * This getter method that gets the imagepath of the object.
      * @return imagePath (type String) - This is going to be the path of where the image file is located
@@ -87,6 +105,8 @@ public class Element extends Coordinate {
         return imagePath;
     }
 
+    
+    
     /**
      * This setter method that will set the image path.
      * @param imagePath (type String - Where the image path file will be located)
