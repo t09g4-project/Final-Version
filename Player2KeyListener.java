@@ -26,6 +26,8 @@ public class Player2KeyListener implements KeyListener {
     public Player2KeyListener(Snake snake) {
         this.snake = snake;
     }
+    
+    
 
     /**
      * Handles the key typed event
@@ -36,6 +38,8 @@ public class Player2KeyListener implements KeyListener {
 
     }
 
+    
+    
     /**
      * Handles key pressed event. Responsible for listening to what player 2 has pressed. It will move the snake
      * depending on what was pressed. It will listen to the WASD keys.
@@ -59,6 +63,8 @@ public class Player2KeyListener implements KeyListener {
         }
     }
 
+    
+    
     /**
      * Handles the key release event.
      * @param e
