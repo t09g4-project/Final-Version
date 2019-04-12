@@ -45,6 +45,10 @@ public class MenuPanel extends JPanel {
     }
 
     
+    /**
+     * Method that will show the picture on the interface
+     * @param g (Type Graphics) - Class that will be used to draw the picture. 
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
