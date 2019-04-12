@@ -21,10 +21,9 @@ import java.awt.event.ActionListener;
 public class MenuListener implements ActionListener {
     private JFrame jFrame;
 
-    // not sure if correct.
     /**
-     * constructor that accepts a JFrame object.
-     * @param jFrame (Type JFrame)
+     * constructor that accepts a JFrame object and sets it up as it's field.
+     * @param jFrame (Type JFrame) 
      */
     public MenuListener(JFrame jFrame) {
         this.jFrame = jFrame;
@@ -56,8 +55,8 @@ public class MenuListener implements ActionListener {
     
     
     /**
-     *
-     * @param e
+     * Method that removes the button when clicked to ensure the button disappears.
+     * @param e (type ActionEvent) - What the click was
      */
     private void removeButton(ActionEvent e) {
         JButton clickButton = (JButton)e.getSource();
