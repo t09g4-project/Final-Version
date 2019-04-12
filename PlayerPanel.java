@@ -57,6 +57,9 @@ public class PlayerPanel extends JPanel {
         initWall();
         this.interval = interval;
     }
+    
+    
+    
     public void go() {
         run(countDownThread(), interval);
     }
@@ -88,6 +91,8 @@ public class PlayerPanel extends JPanel {
         return countDownThread;
     }
 
+    
+    
     /**
      * This method initalizes the Board of the game. It will set up the walls.
      */
@@ -104,6 +109,8 @@ public class PlayerPanel extends JPanel {
             rampart.add(new Wall(x, Configure.Board.YNum));
         }
     }
+    
+    
 
     /**
      * Method is initalizing Food and responsible for randomly generating the Food's X & Y position.
@@ -116,6 +123,8 @@ public class PlayerPanel extends JPanel {
         setFood(food);
     }
 
+    
+    
     /**
      * Method initalizes Bonus and randonly generates the Bonus' X & Y position.
      */
@@ -127,6 +136,8 @@ public class PlayerPanel extends JPanel {
         setBonus(bonus);
     }
 
+    
+    
     /**
      * Method initalizes Posion and randomly generates the Poison object's X & Y position.
      */
@@ -138,6 +149,8 @@ public class PlayerPanel extends JPanel {
         setPoison(poison);
     }
 
+    
+    
     /**
      * Method initializes the walls for the game.
      */
@@ -156,6 +169,8 @@ public class PlayerPanel extends JPanel {
         }
     }
 
+    
+    
     /**
      * Method initalizes the sanke.
      */
@@ -168,6 +183,8 @@ public class PlayerPanel extends JPanel {
         this.snake.setCode(Configure.Snake.CODE_A);
     }
 
+    
+    
     /**
      *
      */
@@ -181,6 +198,8 @@ public class PlayerPanel extends JPanel {
         }).start();
     }
 
+    
+    
     /**
      *
      * @param snake
@@ -209,6 +228,8 @@ public class PlayerPanel extends JPanel {
         if (isGameOver())
             addBackMenuBtn();
     }
+    
+    
 
     /**
      * This method is responsible for randomly generating the X & Y coordinate position of the various objects such as
@@ -226,6 +247,8 @@ public class PlayerPanel extends JPanel {
         element.setY(y);
     }
 
+    
+    
      /**
      * This method sets the Snake picture size to make the picture in the path have the same size in the game.
      * @param g (Type Graphics) - Object that is responsible for drawing
@@ -248,6 +271,7 @@ public class PlayerPanel extends JPanel {
     }
 
 
+    
     /**
      * Get elements of the wall/rock
      * @return
@@ -261,6 +285,8 @@ public class PlayerPanel extends JPanel {
         return elements;
     }
 
+    
+    
     /**
      *
      * @return
@@ -276,6 +302,8 @@ public class PlayerPanel extends JPanel {
         return elements;
     }
 
+    
+    
     /**
      *
      * @param element (if it is exisiting,
@@ -291,6 +319,8 @@ public class PlayerPanel extends JPanel {
         return false;
     }
 
+    
+    
     /**
      *
      * @param g
@@ -311,9 +341,9 @@ public class PlayerPanel extends JPanel {
             dead(g);
             gameover(g);
         }
-
-
     }
+    
+    
 
     /**
      * This method renders the current score.
@@ -326,9 +356,13 @@ public class PlayerPanel extends JPanel {
                 Configure.Element.ElementWidth * 2);
     }
 
+    
+    
     public boolean isGameOver() {
         return !this.snake.isAlive();
     }
+    
+    
 
     /**
      *
@@ -340,6 +374,8 @@ public class PlayerPanel extends JPanel {
                 Configure.Element.ElementWidth * 2);
     }
 
+    
+    
     /**
      *
      * @return
@@ -350,6 +386,8 @@ public class PlayerPanel extends JPanel {
         return elements;
     }
 
+    
+    
     /**
      *
      * @param g
@@ -360,6 +398,8 @@ public class PlayerPanel extends JPanel {
             fillRect(g, e);
         });
     }
+    
+   
 
     /**
      *
@@ -379,6 +419,8 @@ public class PlayerPanel extends JPanel {
             }
         }
     }
+    
+    
 
     /**
      *
@@ -388,6 +430,8 @@ public class PlayerPanel extends JPanel {
         return wallList;
     }
 
+    
+    
     /**
      *
      * @param wallList
@@ -395,6 +439,8 @@ public class PlayerPanel extends JPanel {
     public void setWallList(ArrayList<Wall> wallList) {
         this.wallList = wallList;
     }
+    
+    
 
     /**
      *
@@ -404,14 +450,18 @@ public class PlayerPanel extends JPanel {
         return rampart;
     }
 
+    
+    
     /**
-     *
+     * 
      * @param rampart
      */
     public void setRampart(ArrayList<Wall> rampart) {
         this.rampart = rampart;
     }
 
+    
+    
     /**
      * Getter method for food.
      * @return food (Type Food, the food object)
@@ -420,6 +470,8 @@ public class PlayerPanel extends JPanel {
         return food;
     }
 
+    
+    
     /**
      * Setter method that sets the food.
      * @param food (type Food - the food object you want to pass in)
@@ -428,6 +480,8 @@ public class PlayerPanel extends JPanel {
         this.food = food;
     }
 
+    
+    
     /**
      * Getter method that gets the Bonus object.
      * @return bonus (The Bonus object)
@@ -436,6 +490,8 @@ public class PlayerPanel extends JPanel {
     	return bonus;
     }
 
+    
+    
     /**
      * Setter method that sets the Bonus object for the bonus field.
      * @param bonus (The Bonus object you want to pass in)
@@ -444,6 +500,8 @@ public class PlayerPanel extends JPanel {
     	this.bonus = bonus;
     }
 
+    
+    
     /**
      * Getter method that gets the poison object.
      * @return poison (The poison object)
@@ -452,6 +510,8 @@ public class PlayerPanel extends JPanel {
         return poison;
     }
 
+    
+    
     /**
      * setter method that sets the poison.
      * @param poison (Type Posion, the poison object)
@@ -460,6 +520,8 @@ public class PlayerPanel extends JPanel {
         this.poison = poison;
     }
 
+    
+    
     /**
      * Getter method that gets the snake.
      * @return snake (Type Snake)
@@ -468,6 +530,8 @@ public class PlayerPanel extends JPanel {
         return snake;
     }
 
+    
+    
    /**
      * Method that will draw game over. 
      * @param g (Type Graphics) - Object that will used to draw Game Over 
