@@ -13,6 +13,9 @@ import com.game.common.Configure;
 public class Food extends Element {
 
 
+    /**
+     * Constructor that sets up the elements and settings of the Food object
+     */
     public Food() {
         this.setColor(Configure.Food.color);
         this.setScore(Configure.Food.score);
