@@ -468,9 +468,9 @@ public class PlayerPanel extends JPanel {
         return snake;
     }
 
-    /**
-     *
-     * @param g
+   /**
+     * Method that will draw game over. 
+     * @param g (Type Graphics) - Object that will used to draw Game Over 
      */
     public void gameover(Graphics g) {
         g.setColor(Color.RED);
@@ -478,9 +478,16 @@ public class PlayerPanel extends JPanel {
                 Configure.Element.ElementWidth * 8);
     }
 
+    
+    
+    /**
+     * Method that adds a back menu button. When clicked it will return the user to the menu panel.
+     */
     public void addBackMenuBtn() {
         JButton backMenuBtn = new Button("Back to Menu");
         JPanel thisjPanel = this;
+        
+       
         backMenuBtn.addActionListener(e -> {
             JFrame jFrame = (JFrame) this.getParent().getParent().getParent();
             thisjPanel.removeAll();
@@ -488,6 +495,7 @@ public class PlayerPanel extends JPanel {
             jFrame.revalidate();
             jFrame.repaint();
         });
+        
         backMenuBtn.setLayout(null);
         backMenuBtn.setBounds(Configure.Element.ElementWidth * (Configure.Board.XNum + 10),
                 Configure.Element.ElementWidth * 5, 150,30);
