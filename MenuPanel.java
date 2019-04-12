@@ -16,11 +16,17 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * This class creates a view that will contain two buttons, (1 player, 2 players).
+ * This class creates a view that will contain three buttons, (1 player, 2 players, challenge).
  * This view will be used at the start of the program to determine if the user wants to play the game
- * with one player or two players.
+ * with one player or two players and gives them an Challenge option.
  */
 public class MenuPanel extends JPanel {
+    
+    
+    /**
+     * Constructor that will set up the JFrame that was passed in. 
+     * @param jFrame (type JFrame - the JFrame you want to pass in)
+     */
     public MenuPanel(JFrame jFrame) {
         this.setBackground(Configure.Theme.BACKGROUND_COLOR);
         JButton button1 = new Button("1 Player");
@@ -38,6 +44,7 @@ public class MenuPanel extends JPanel {
         this.add(button3);
     }
 
+    
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
