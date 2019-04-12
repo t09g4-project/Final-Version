@@ -30,7 +30,7 @@ public class Player1KeyListener implements KeyListener {
     
     /**
      * Handles the key typed event.
-     * @param e
+     * @param e (Type KeyEvent - What KeyStroke occured)
      */
     @Override
     public void keyTyped(KeyEvent e) {
@@ -66,7 +66,7 @@ public class Player1KeyListener implements KeyListener {
 
     /**
      * Handles the key released event.
-     * @param e
+     * @param e (Type KeyEvent - What KeyStroke occured)
      */
     @Override
     public void keyReleased(KeyEvent e) {
