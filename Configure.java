@@ -109,7 +109,9 @@ public class Configure {
 
     
     
-    
+    /**
+     * Default Configuration for the names in two player mode.
+     */
     public static class Snake {
         public static final String CODE_A = "a";
         public static final String CODE_B = "b";
