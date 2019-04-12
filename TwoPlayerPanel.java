@@ -19,7 +19,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
+/**
+ * Class responsible for Snake game panel for two players. It inherits from PlayerPanel and introduces some other methods
+ * just that are mainly for the second player. 
+ */
 public class TwoPlayerPanel extends PlayerPanel {
     private volatile Snake snake2;
 
