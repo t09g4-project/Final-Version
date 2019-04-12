@@ -220,10 +220,10 @@ public class PlayerPanel extends JPanel {
         element.setY(y);
     }
 
-    /**
+     /**
      * This method sets the Snake picture size to make the picture in the path have the same size in the game.
-     * @param g
-     * @param e
+     * @param g (Type Graphics) - Object that is responsible for drawing
+     * @param e (Type Element) - The element object that you want to pass in
      */
     void fillRect(Graphics g, Element e) {
         int width = Configure.Element.ElementWidth;
