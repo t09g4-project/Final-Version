@@ -31,6 +31,8 @@ public class TwoPlayerPanel extends PlayerPanel {
         this.snake2.setName(bName);
     }
 
+    
+    
     /**
      *
      * @param g
@@ -45,11 +47,15 @@ public class TwoPlayerPanel extends PlayerPanel {
         }
     }
 
+    
+    
     @Override
     public boolean isGameOver() {
         return super.isGameOver() && !snake2.isAlive();
     }
 
+    
+    
     /**
      *
      */
@@ -59,6 +65,8 @@ public class TwoPlayerPanel extends PlayerPanel {
         initSnake2();
     }
 
+    
+    
     /**
      *
      */
@@ -71,6 +79,8 @@ public class TwoPlayerPanel extends PlayerPanel {
         this.snake2.setCode(Configure.Snake.CODE_B);
     }
 
+    
+    
     /**
      *
      * @return
@@ -82,6 +92,8 @@ public class TwoPlayerPanel extends PlayerPanel {
         return elements;
     }
 
+    
+    
     /**
      *
      * @param g
@@ -94,6 +106,8 @@ public class TwoPlayerPanel extends PlayerPanel {
                 Configure.Element.ElementWidth * 3);
     }
 
+    
+    
     /**
      *
      */
@@ -109,6 +123,8 @@ public class TwoPlayerPanel extends PlayerPanel {
         }).start();
     }
 
+    
+    
     /**
      *
      * @param g
@@ -134,6 +150,8 @@ public class TwoPlayerPanel extends PlayerPanel {
         }
     }
 
+    
+    
     /**
      *
      * @param g
