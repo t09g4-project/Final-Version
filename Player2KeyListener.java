@@ -20,7 +20,7 @@ public class Player2KeyListener implements KeyListener {
     private Snake snake;
 
     /**
-     * Constructor that sets teh field of the snake.
+     * Constructor that sets the field of the snake.
      * @param snake (The object that is passed in is the snake for player 2 - Type Snake)
      */
     public Player2KeyListener(Snake snake) {
@@ -31,7 +31,7 @@ public class Player2KeyListener implements KeyListener {
 
     /**
      * Handles the key typed event
-     * @param e
+     * @param e(Type KeyEvent - What KeyStroke occured)
      */
     @Override
     public void keyTyped(KeyEvent e) {
@@ -67,7 +67,7 @@ public class Player2KeyListener implements KeyListener {
     
     /**
      * Handles the key release event.
-     * @param e
+     * @param e(Type KeyEvent - What KeyStroke occured)
      */
     @Override
     public void keyReleased(KeyEvent e) {
